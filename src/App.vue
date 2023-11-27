@@ -1,8 +1,5 @@
 <script >
 
-/* const commerce = (typeof process.env.VUE_APP_CHEC_PUBLIC_KEY !== 'undefined') ? new Commerce(process.env.VUE_APP_CHEC_PUBLIC_KEY) : null;
- */
-
 export default {
   data() {
     return {
@@ -49,17 +46,6 @@ export default {
       this.sortOrder = ''
     }
   },
-  computed: {
-    sortedProducts() { 
-      console.log('jhgf')
-      return this.filterdProducts.sort((a, b) => {
-        if (this.sortOrder === 'low') 
-          return a.price - b.price
-           else  
-          return b.price - a.price
-      });
-    },
-  },
 };
 </script>
 
@@ -93,5 +79,18 @@ export default {
 </template>
 
 <style scoped>
+ul{
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  list-style: none;
+}
 
+button{
+  margin-left: 1rem;
+}
+input,select{
+  height: 2rem;
+  margin: 0 1rem;
+}
 </style>
